@@ -1,0 +1,51 @@
+/*
+Zero out margins and padding
+on all elements and styles
+*{
+    margin:0;
+    padding:0;
+}
+*/
+
+header{
+    color:white;
+    text-align:center;
+    background-color:gray;
+    padding:10px;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    background-color:#ccc;
+    color:white;
+
+    font-family: Garamond,serif;
+    font-size:18px;
+    Line-height:1.6em;
+
+    margin:5px;    
+}
+
+.container{
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+}
+.search{
+    display: flex;
+    height: 30px;
+    width: 90%;
+    border-radius: 30px
+}
+
+footer{
+    width: 100%;
+    color:green;
+    background-color:white;
+    text-align:center;
+    font-size:10px; }
+
