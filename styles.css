@@ -9,26 +9,36 @@ on all elements and styles
 
 body{
     display: flex;
-    min-height: 100vh;
-    /*flex-direction: column;*/
     flex-direction: column;
 }
 
-#checkbox1{
+#dark-mode-toggle{
     position: fixed;
-    right: 0;
-    boder-radius: 10;
+    right: 15px;
+
+    padding: 0.5rem 1rem;
+
+    height: 15px;
+    width: 45px;
+    boder-radius: 100%;
+}
+
+main{
+    display: flex;
+    min-height: 100vh;
 }
 
 #searchbox{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-self: center;
+    width: 100%;
 }
 
 #search-field{
-    display: flex;
-    align-self: center;
+    width: 80%;
+    height: 30px;
+    border-radius: 20px;
 }
 
 footer{
