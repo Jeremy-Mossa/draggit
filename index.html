@@ -3,28 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Index App</title>
+    <title>draggit</title>
     <link rel="stylesheet" href="styles.css">
 
     <title>draggit</title>
 </head>
 <body>
 
-    <div class="navbar">
-        <div class="darkmode-switch">
-            <input type="checkbox" id="checkbox1"
+    <header class="header" id="header">
+        <nav class="navbar">
+            <input type="checkbox" id="checkbox1" placeholder="Search">
+        </nav>
+    </header>
+
+    <main>
+        <div id="searchbox">
+            <input id="search-field"></input>
         </div>
-    </div>
-
-    <div class="container">
-        <input class="search" id="search-field"></input>
-    </div>
-
-    <script src="main.js"></script>
+    </main>
 
     <footer>
-        <p>Copyright &copy; 2024, Web Index App</p>
+        <p>Copyright &copy; 2024, Jeremy Mossa. All rights reserved.</p>
     </footer>
 
+    <script src="main.js"></script>
 </body>
 </html>

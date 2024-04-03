@@ -7,3 +7,35 @@ on all elements and styles
 }
 */
 
+body{
+    display: flex;
+    min-height: 100vh;
+    /*flex-direction: column;*/
+    flex-direction: column;
+}
+
+#checkbox1{
+    position: fixed;
+    right: 0;
+    boder-radius: 10;
+}
+
+#searchbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#search-field{
+    display: flex;
+    align-self: center;
+}
+
+footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: light-gray;
+  color: white;
+  text-align: center;
+}
