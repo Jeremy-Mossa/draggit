@@ -10,17 +10,51 @@ on all elements and styles
 body{
     display: flex;
     flex-direction: column;
+    background-color: gray;
+}
+
+header{
+    display: flex;
 }
 
 #dark-mode-toggle{
-    position: fixed;
-    right: 15px;
+    /*display: inline-block;*/
+    position: absolute;
+    right: 40px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
 
-    padding: 0.5rem 1rem;
+#toggle-checkbox{
+    /*display: none;  this hides the checkbox */
+}
 
-    height: 15px;
-    width: 45px;
-    boder-radius: 100%;
+#toggle-slider{
+    position: relative;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: white;
+    transition: all 0.2s ease;
+}
+
+#toggle-checkbox:checked + #toggle-slider{ 
+}
+
+#toggle-slider::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: red;
+    transition: all 0.2s ease;
+}
+
+#toggle-checkbox:checked + #toggle-slider::after{ 
+    left: calc(100% - 2px);
 }
 
 main{
