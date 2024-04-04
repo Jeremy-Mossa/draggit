@@ -8,6 +8,8 @@ on all elements and styles
 */
 
 body{
+    margin: 0;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     background-color: gray;
@@ -17,44 +19,54 @@ header{
     display: flex;
 }
 
-#dark-mode-toggle{
-    /*display: inline-block;*/
+#darkmode{
     position: absolute;
-    right: 40px;
-    cursor: pointer;
-    transition: all 0.2s ease;
+    right: 15px;
+    top: 15px;
+    width: 0;
+    height: 0;
+    visibility: hidden;
 }
 
-#toggle-checkbox{
-    /*display: none;  this hides the checkbox */
-}
-
-#toggle-slider{
-    position: relative;
-    cursor: pointer;
-    border-radius: 10px;
-    background-color: white;
-    transition: all 0.2s ease;
-}
-
-#toggle-checkbox:checked + #toggle-slider{ 
-}
-
-#toggle-slider::after{
-    content: "";
+label{
     position: absolute;
-    top: 50%;
-    left: 10px;
-    transform: translateY(-50%);
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background-color: red;
-    transition: all 0.2s ease;
+    right: 15px;
+    top: 15px;
+    width: 60px;
+    height: 30px;
+    display: block;
+    background-color: #ebebeb;
+    border-radius: 30px;
+    box-shadow: inset 0px 5px 10px rgba(0,0,0,0.4), 0px 5px 10px rgba(255,255,255,0.4);
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-#toggle-checkbox:checked + #toggle-slider::after{ 
-    left: calc(100% - 2px);
+label:after{
+    content:"";
+    width: 25px;
+    height: 25px;
+    top: 2.5px;
+    left: 2.5px;
+    position: absolute;
+    background: linear-gradient(180deg,#ffcc89,#d8860b);
+    border-radius: 25px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+#darkmode:checked + label{
+    background: #242424;
+}
+
+#darkmode:checked + label:after{
+    left: 31px;
+    transition: translateX(100%);
+    background: linear-gradient(180deg,#777,#3a3a3a);
+}
+
+label:active:after{
+    width: 27px;
 }
 
 main{
